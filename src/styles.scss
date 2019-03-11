@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons');
+// @import url('./assets/css/fontawesome.min.css');
+// @import url('https://fonts.googleapis.com/css?family=Nova+Mono');
+
+$primary : #2bdbff;
+$primaryLight : #78ffff;
+$primaryDark : #00a9cc;
+
+$secondary: #ffc107;
+$secondaryLight : #fff350;
+$secondaryDark : #c79100;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #2bdbff;
+    background: #1a181b;
+    margin:0;
+    overflow-x: hidden;
+  }
+
+  .wrapper {
+    width: 80% !important;
+    margin: auto !important;
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+
+  a.mybtn {
+    font-size: 12px;
+    text-decoration: none;
+    color: #2bdbff;
+  }
+  
+  a.mybtn span {
+    display: inline-block;
+    border: #2bdbff 1px solid;
+    padding: 10px 20px;
+    transition: 200ms;
+    box-shadow: 0 0 15px 5px #0a0a0a;
+  }
+  
+  a.mybtn:hover span {
+    background: #2bdbff;
+    color: #151316;
+    padding: 9px 18px;
+    box-shadow: none;
+  }

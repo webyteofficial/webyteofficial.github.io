@@ -1,0 +1,231 @@
+$secondary: #ffc107;
+$secondaryLight : #fff350;
+$secondaryDark : #c79100;
+
+$primary : #2bdbff;
+$primaryLight : #78ffff;
+$primaryDark : #0d7c92;
+
+header {
+  position: relative;
+  top:0;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  z-index: 10;
+}
+
+#brand {
+    display: flex;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+#logo {
+  position: relative;
+  top: -10px;
+  margin-right: 10px;
+}
+
+#logostroke{
+  fill:none;
+  stroke:#2bdbff;
+  stroke-width:5;
+  stroke-miterlimit:10;
+  animation: dash 5s ease-out forwards;
+}
+
+#logofill {
+  opacity: 0;
+  fill: #2bdbff;
+  animation: view 0.5s 2s ease-out forwards;
+}
+
+#logo:hover #logostroke {
+  stroke: #fff;
+}
+
+#logo:hover #logofill {
+  fill: #fff;
+}
+
+@keyframes view { to { opacity: 1; }}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 2400;
+    stroke-dashoffset: 2500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+#brand h1 {
+  margin-top: 7px;
+}
+
+
+/* ====>>>> INDEX SHOWCASE <<<<==== */
+
+.nav-bar {
+  margin: 20px;
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar > span {
+  width: 20%;
+}
+
+.nav-bar > span svg {
+  position: absolute;
+  top: 8px;
+}
+
+#brand a, .nav-bar > span a {
+  text-decoration: none;
+  color: #2bdbff;
+}
+
+#brand a:hover, .nav-bar > span a:hover {
+  color: #fff;
+}
+
+.nav-bar > span a span {
+  display: table;
+  margin: auto;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.button {
+  stroke-dasharray: 100 255;
+  stroke-dashoffset: 200;
+  opacity:0;
+}
+
+.button .border{
+  fill:none;
+  stroke:#2BDBFF;
+  stroke-width: 2;
+  stroke-miterlimit:10;
+  stroke-linecap: round;
+}
+
+.button:hover {
+  animation: border 1s ease-out forwards;
+}
+
+@keyframes border {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  40% {
+    stroke-dasharray: 180;
+  }
+  100% {
+    opacity: 1;
+    stroke-dasharray: 20 200;
+    stroke-dashoffset: -195;
+  }
+}
+
+
+// overlay begins
+
+.overlay{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+  background: rgba(15, 15, 15, 0.9);
+  visibility: hidden;
+
+  .close{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: white;
+    font-size: 30px;
+  }
+
+  form{
+    background: rgb(31, 29, 31);
+    padding: 30px;
+    border: 1px solid black;
+    width: 300px;
+    border-radius: 10px;
+    height: fit-content;
+    transform-origin: bottom;
+    transform: scale(0);
+  }
+
+  .row{
+    margin-bottom: 20px;
+  }
+}
+
+
+.input-group-prepend{
+    border-radius: 20px;
+    border: none;
+    background: rgb(43, 40, 43);
+    color: $primaryLight;
+    font-weight: 200;
+}
+
+.form-control{
+    color: $primaryLight;
+    font-weight: 200;
+    border-radius: 20px;
+    background: rgb(43, 40, 43);
+    border: none;
+}
+.input-group-text{
+    border-radius: 20px;
+    background: rgb(43, 40, 43);
+    width: 40px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: none;
+}
+
+.btn1{
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border:1px solid $secondary;
+    text-decoration: none;
+    color: $secondary;
+}
+
+.btn1:hover{
+    color: rgb(14, 71, 71); 
+    text-decoration: none;
+    background: $secondary;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}
+
+input:focus, input:active, .input-group-prepend:focus, .form-control:focus{
+    color: $primaryLight;
+    font-weight: 200;
+    background: rgb(43, 40, 43);
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
