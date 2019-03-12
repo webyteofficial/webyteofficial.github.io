@@ -89,3 +89,39 @@ input:focus, input:active, .input-group-prepend:focus, .form-control:focus{
     border: none;
     outline: none;
 }
+
+
+.overlay{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: rgba(15, 15, 15, 0.9);
+    visibility: hidden;
+  
+    .close{
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      color: white;
+      font-size: 30px;
+    }
+  
+    .card{
+      background: rgb(31, 29, 31);
+      padding: 30px;
+      border: 1px solid black;
+      width: 300px;
+      border-radius: 10px;
+      height: fit-content;
+      transform-origin: bottom;
+      transform: scale(0);
+    }
+  
+}

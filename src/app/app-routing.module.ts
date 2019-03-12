@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { EventsComponent } from './events/events.component';
+import { SuccessComponent } from './success/success.component';
 
 const routes: Routes = [
   {path : '', redirectTo : '/home', pathMatch:'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   // {path : 'contact', component: ContactComponent},
   {path : 'about', component: AboutComponent},
   {path : 'events', component: EventsComponent},
+  {path : 'success', component : SuccessComponent}
 ];
 
 @NgModule({
