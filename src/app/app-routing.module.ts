@@ -8,19 +8,19 @@ import { EventsComponent } from './events/events.component';
 import { SuccessComponent } from './success/success.component';
 
 const routes: Routes = [
-  {path : '', redirectTo : '/home', pathMatch:'full'},
-  {path : 'home', component:HomeComponent},
-  {path : 'registration', component:RegistrationComponent},
-  // {path : 'contact', component: ContactComponent},
-  {path : 'about', component: AboutComponent},
-  {path : 'events', component: EventsComponent},
-  {path : 'success', component : SuccessComponent}
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'registration', component: RegistrationComponent },
+    // {path : 'contact', component: ContactComponent},
+    { path: 'about', component: AboutComponent },
+    { path: 'events', component: EventsComponent },
+    { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{
-    anchorScrolling : 'enabled'
-  })],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes, {
+        anchorScrolling: 'enabled'
+    })],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
