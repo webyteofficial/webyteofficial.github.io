@@ -12,6 +12,10 @@ import { LandingComponent } from './landing/landing.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SuccessComponent } from './success/success.component'
+
 
 @NgModule({
   declarations: [
@@ -22,12 +26,15 @@ import { AboutComponent } from './about/about.component';
     LandingComponent,
     RegistrationComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
