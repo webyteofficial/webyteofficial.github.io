@@ -1,3 +1,5 @@
+import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
@@ -14,7 +16,10 @@ const routes: Routes = [
     // {path : 'contact', component: ContactComponent},
     { path: 'about', component: AboutComponent },
     { path: 'events', component: EventsComponent },
-    { path: '**', redirectTo: 'home' },
+    { path : 'admin/login', component : AdminLoginComponent},
+    { path : 'admin/users' , component : AdminUsersComponent},
+    { path: '**', redirectTo: 'home' }
+
 ];
 
 @NgModule({

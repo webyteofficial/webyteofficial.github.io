@@ -6,6 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class UserService {
   registerUrl : string = 'https://webyte-api.herokuapp.com/user';
+  loginUrl : string = 'https://webyte-api.herokuapp.com/user/login';
 
   constructor(public http : HttpClient){ }
 
@@ -20,5 +21,17 @@ export class UserService {
       headers : headers
     });
 
+  }
+
+  login(body){
+    console.log(body);
+    
+    const headers = new HttpHeaders({
+      'Content-Type':  'application/json',
+    });
+
+    return this.http.post(this.loginUrl, body , {
+      headers : headers
+    });
   }
 }

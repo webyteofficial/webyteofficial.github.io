@@ -52,6 +52,16 @@
 					</div>
 				</div>
 				<div class="row">
+					<div class="input-group col-md-12">
+						<div class="input-group-prepend">
+							<span class="input-group-text">
+								<img src="./../../assets/svg/phone.svg" alt="">
+							</span>
+						</div>
+						<input type="text" name = "phone" class="form-control" placeholder="Phone number..." [(ngModel)] = "phone">
+					</div>
+				</div>
+				<div class="row">
 					<div class="input-group no-border col-md-12">
 						<div class="input-group-prepend">
 							<span class="input-group-text">
@@ -61,8 +71,21 @@
 						<input type="password" name = "password" class="form-control" placeholder="Password..." [(ngModel)] = "password">
 					</div>
 				</div>
+				<div class="row">
+					<div class="input-group no-border col-md-12">
+						<div class="input-group-prepend">
+							<span class="input-group-text">
+								<img src="./../../assets/svg/gender.svg" alt="">
+							</span>
+						</div>
+						<select name="gender" id="gender" class="form-control" [(ngModel)] = "gender">
+							<option value="Male" selected>Male</option>
+							<option value="Female">Female</option>
+						</select>
+					</div>
+				</div>
 				<div class="card-footer text-center">
-					<input type="submit" value="Get Started">  
+					<button type="submit" class="btn1"> Get Started </button>
 				</div>
 
 				<small *ngIf = "displayDuplicate" [ngStyle]="{'color' : '#d50000'}" id="errorLogin"> User Already registered </small>
