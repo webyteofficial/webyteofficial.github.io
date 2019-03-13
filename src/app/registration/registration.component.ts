@@ -17,7 +17,7 @@ export class RegistrationComponent implements OnInit {
   email : string;
   password:string;
   displayDuplicate : boolean;
-  gender : string;
+  gender : string = "Male";
   phone: string;
 
   constructor(private userService : UserService, private router : Router) { }
