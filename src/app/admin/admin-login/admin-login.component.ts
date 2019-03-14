@@ -1,3 +1,4 @@
+import { AdminService } from './../../admin.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-login.component.scss']
 })
 export class AdminLoginComponent implements OnInit {
-
-  constructor() { }
+  email:string;
+  password: string;
+  constructor(private adminService : AdminService) { }
 
   ngOnInit() {
+  }
+
+  login(){
+    var body = {
+      email : this.email,
+      password : this.password
+    }
+
+    this.adminService.login(body).subscribe(data => {
+      console.log(data);
+    });
   }
 
 }

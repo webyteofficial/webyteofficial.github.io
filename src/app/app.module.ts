@@ -14,8 +14,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { LandingComponent } from './landing/landing.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
@@ -31,8 +29,6 @@ import { AdminLoginComponent } from './admin/admin-login/admin-login.component'
     AppComponent,
     EventsComponent,
     NavbarComponent,
-    HomeComponent,
-    LandingComponent,
     RegistrationComponent,
     ContactComponent,
     AboutComponent,

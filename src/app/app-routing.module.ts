@@ -1,8 +1,8 @@
+import { AboutComponent } from './about/about.component';
 import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
-import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home/home.component';
 import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
