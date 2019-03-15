@@ -27,7 +27,10 @@ export class UserService implements OnInit {
 
         this.http.post(environment.api + '/user/login', { email: 'atanugaindfddd534@gmail.com', password: 'atanugain' }, {
             observe: 'response'
-        }).subscribe(res => console.log(res));
+        }).subscribe(res => {
+            console.log(res)
+            // console.log(res.headers.get('authorization'))
+        });
 
         return this.http.post(environment.api + '/user', body, {
             headers: headers,
