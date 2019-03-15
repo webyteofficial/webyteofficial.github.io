@@ -4,11 +4,12 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 
 interface User {
-  name : string,
+  phone : string,
   email : string,
   firstname : string,
   lastname : string,
   enrollment : string,
+  gender : string
 }
 
 @Component({
@@ -17,10 +18,16 @@ interface User {
   styleUrls: ['./admin-users.component.scss']
 })
 export class AdminUsersComponent  {
-  itemsPerPage = 25;
-  displayedColumns: string[] = ['email', 'enrollment', '', 'low', 'high', 'volume', 'date'];
-  page : number = 1;
-
+  data = [
+    { email : 'abhishekrathore246@gmail.com', enrollment : 'enrollment', 
+      phone : '54564565', 
+      firstname : 'abhishek',
+      lastname : 'rathore',
+      gender : 'Male'
+    }
+  ]
+ 
+  displayedColumns: string[] = ['email', 'enrollment', 'firstname', 'phone', 'lastname', 'gender'];
   dataSource: MatTableDataSource<User>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -31,14 +38,12 @@ export class AdminUsersComponent  {
   }
 
   renderData(){
-    console.log(this.itemsPerPage);
-    this.adminService.getUsers().subscribe((data : User[]) => {
-      console.log(data);
-      this.dataSource = new MatTableDataSource(data);
-      console.log(this.dataSource); 
+    // this.adminService.getUsers().subscribe((data : User[]) => {
+      console.log(this.data);
+      this.dataSource = new MatTableDataSource(this.data);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
-    })
+    // })
   }
 
   

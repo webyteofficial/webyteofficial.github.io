@@ -20,6 +20,8 @@ export class AdminLoginComponent implements OnInit {
       password : this.password
     }
 
+    console.log(body);
+    
     this.adminService.login(body).subscribe(data => {
       console.log(data);
     });

@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { UserService } from './../user.service';
-import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 declare var TweenMax;
 
@@ -9,7 +9,7 @@ declare var TweenMax;
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit, AfterViewInit {
+export class NavbarComponent{
   @ViewChild('overlay') overlay : ElementRef;
   email : string;
   password:string;
@@ -20,10 +20,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   constructor(private userService : UserService,private router : Router) { }
 
   ngOnInit() {
-  }
-
-  ngAfterViewInit(){
-    console.log(this.overlay);
   }
 
   open(){
