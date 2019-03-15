@@ -24,6 +24,10 @@ export class AdminLoginComponent implements OnInit {
     
     this.adminService.login(body).subscribe(data => {
       console.log(data);
+      console.log(data.body);
+      console.log(data.headers);
+      console.log(data.headers.get('authorization'));
+      
     });
   }
 

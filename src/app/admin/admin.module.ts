@@ -13,8 +13,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     imports: [
         CoreModule,
         RouterModule.forChild([
-            { path: 'admin/login', component: AdminLoginComponent },
-            { path: 'admin/users', component: AdminUsersComponent },
+            { path: 'login', component: AdminLoginComponent },
+            { path: 'users', component: AdminUsersComponent },
         ])
     ]
 })

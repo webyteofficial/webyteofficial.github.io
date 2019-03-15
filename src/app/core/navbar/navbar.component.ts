@@ -22,17 +22,6 @@ export class NavbarComponent{
   ngOnInit() {
   }
 
-  open(){
-    this.overlay.nativeElement.style.visibility = 'visible';
-    TweenMax.to(this.overlay.nativeElement, 0.2, { display : 'flex', });
-    TweenMax.to(this.overlay.nativeElement.children[1], 0.2, {  scale : 1 });
-  }
-  
-  close(){
-    TweenMax.to(this.overlay.nativeElement.children[1], 0.15, {  scale : 0 });
-    TweenMax.to(this.overlay.nativeElement, 0.15, { display : 'none', });
-  }
-
   login(){
     var body = {
       email  : this.email, 
@@ -43,11 +32,13 @@ export class NavbarComponent{
       console.log('into the subscription');
       console.log(data);
 
-      if(data && data['email'] == this.email){
+      if(data && data.body['email'] == this.email){
         this.loggedIn = true;
-        localStorage.setItem('email',this.email);
         this.message = ' ';     
         this.close();
+        var token = data.headers.get('Authorization').split(' ')[1];
+        console.log(token);
+        localStorage.setItem('token',token);
         this.router.navigate(['events']);
       }
       else if(data['message'] == "Invalid Email"){
@@ -59,5 +50,17 @@ export class NavbarComponent{
     },
     error => console.log("error occured"))
   }
+
+  open(){
+    this.overlay.nativeElement.style.visibility = 'visible';
+    TweenMax.to(this.overlay.nativeElement, 0.2, { display : 'flex', });
+    TweenMax.to(this.overlay.nativeElement.children[1], 0.2, {  scale : 1 });
+  }
+  
+  close(){
+    TweenMax.to(this.overlay.nativeElement.children[1], 0.15, {  scale : 0 });
+    TweenMax.to(this.overlay.nativeElement, 0.15, { display : 'none', });
+  }
+
 
 }

@@ -4,10 +4,10 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 
 interface User {
-    phone: string,
-    email: string,
     firstname: string,
     lastname: string,
+    phone: string,
+    email: string,
     enrollment: string,
     gender: string
 }
@@ -28,7 +28,7 @@ export class AdminUsersComponent {
         }
     ]
 
-    displayedColumns: string[] = ['email', 'enrollment', 'firstname', 'phone', 'lastname', 'gender'];
+    displayedColumns: string[] = ['enrollment', 'fullName', 'email', 'phone', 'gender'];
     dataSource: MatTableDataSource<User>;
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -39,12 +39,12 @@ export class AdminUsersComponent {
     }
 
     renderData() {
-        // this.adminService.getUsers().subscribe((data : User[]) => {
-        console.log(this.data);
-        this.dataSource = new MatTableDataSource(this.data);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-        // })
+        this.adminService.getUsers().subscribe((data : User[]) => {
+            console.log(data);
+            this.dataSource = new MatTableDataSource(data);
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+        })
     }
 
 
