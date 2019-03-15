@@ -2,7 +2,6 @@
 // @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons');
 // @import url('./assets/css/fontawesome.min.css');
 // @import url('https://fonts.googleapis.com/css?family=Nova+Mono');
-// @import "~bootstrap/scss/bootstrap.scss";
 
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 
@@ -54,4 +53,64 @@ a.mybtn:hover span {
   color: #151316;
   padding: 9px 18px;
   box-shadow: none;
+}
+
+
+.form-control {
+  color: $primaryLight;
+  font-weight: 200;
+  border-radius: 20px;
+  background: rgb(43, 40, 43);
+  border: none;
+}
+
+.input-group-text {
+  border-radius: 20px;
+  background: rgb(43, 40, 43);
+  width: 40px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+}
+
+.btn1 {
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid $secondary;
+  text-decoration: none;
+  color: $secondary;
+  background: none;
+}
+
+.btn1:hover {
+  color: rgb(14, 71, 71);
+  text-decoration: none;
+  background: $secondary;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+input:focus,
+input:active,
+.input-group-prepend:focus,
+.form-control:focus {
+  color: $primaryLight;
+  font-weight: 200;
+  background: rgb(43, 40, 43);
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+
+.input-group-prepend {
+  border-radius: 20px;
+  border: none;
+  background: rgb(43, 40, 43);
+  color: $primaryLight;
+  font-weight: 200;
 }
