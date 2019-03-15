@@ -57,7 +57,7 @@
   <div class="close" (click) ="close()">
     X
   </div>
-  <form class="form" method="" action="">
+  <form class="form" (ngSubmit)="login()">
       <div class="card-header text-center">
         <h3 class="card-title title-up">Log In</h3>
       </div>
@@ -69,7 +69,7 @@
                 <img src="./../../assets/svg/mail.svg" alt="">
             </span>
           </div>
-          <input type="text" class="form-control" placeholder="Email...">
+          <input type="text" name = "email" class="form-control" placeholder="Email..." [(ngModel)] = "email">
         </div>
       </div>
       
@@ -80,11 +80,13 @@
               <img src="./../../assets/svg/key.svg" alt="">
             </span>
           </div>
-          <input type="password" class="form-control" placeholder="Password...">
+          <input type="password" name = "password" class="form-control" placeholder="Password..." [(ngModel)] = "password">
         </div>
       </div>
       <div class="card-footer text-center">
-        <a href="#pablo" class="btn1">Login</a>
+        <button type="submit" class="btn1"> Login </button>
       </div>
+      <small *ngIf = "message != ' '" [ngStyle]="{'color' : '#d50000'}" id="errorLogin"> {{ message }} </small>
+
     </form>
 </div>

@@ -1,0 +1,36 @@
+<div class="row wrapper">
+  <div class="col-md-2"></div>
+  <form class="form col-md-8" (ngSubmit)="login()">
+    <div class="card-header text-center">
+      <h3 class="card-title title-up">Log In</h3>
+    </div>
+  
+    <div class="row">
+      <div class="input-group col-md-12">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+              <img src="./../../assets/svg/mail.svg" alt="">
+          </span>
+        </div>
+        <input type="text" name = "email" class="form-control" placeholder="Email..." [(ngModel)] = "email">
+      </div>
+    </div>
+      
+      <div class="row">
+        <div class="input-group no-border col-md-12">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <img src="./../../assets/svg/key.svg" alt="">
+            </span>
+          </div>
+          <input type="password" name = "password" class="form-control" placeholder="Password..." [(ngModel)] = "password">
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <button type="submit" class="btn1"> Login </button>
+      </div>
+      <small *ngIf = "message != ' '" [ngStyle]="{'color' : '#d50000'}" id="errorLogin"> {{ message }} </small>
+  </form>
+  <div class="col-md-2"></div>
+  
+</div> 

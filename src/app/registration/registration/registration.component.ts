@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { UserService } from './../user.service';
+import { UserService } from './../../user.service';
 import { Router } from '@angular/router';
 
 declare var TweenMax;
@@ -13,10 +13,12 @@ export class RegistrationComponent implements OnInit {
   @ViewChild('overlay') overlay : ElementRef;
   firstname : string;
   lastname : string;
-  email : string;
   enrollment : string;
+  email : string;
   password:string;
   displayDuplicate : boolean;
+  gender : string = "Male";
+  phone: string;
 
   constructor(private userService : UserService, private router : Router) { }
 
@@ -25,11 +27,13 @@ export class RegistrationComponent implements OnInit {
 
   register(){
     var body = {
-      firstname  : this.firstname, 
-      lastname : this.lastname, 
+      firstName  : this.firstname, 
+      lastName : this.lastname, 
       email  : this.email, 
       enrollment : this.enrollment, 
-      password : this.password
+      password : this.password,
+      gender : this.gender,
+      phone: this.phone
     }
 
     this.userService.register(body).subscribe(data => {
