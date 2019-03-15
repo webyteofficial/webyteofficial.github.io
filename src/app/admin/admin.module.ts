@@ -4,11 +4,13 @@ import { CoreModule } from '../core/core.module';
 
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
     declarations: [
         AdminLoginComponent,
         AdminUsersComponent,
+        AdminDashboardComponent,
     ],
     imports: [
         CoreModule,

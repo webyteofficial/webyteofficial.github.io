@@ -12,11 +12,7 @@ export class AdminService {
   constructor(private http : HttpClient) { }
 
   getUsers(){
-    return this.http.get(this.userUrl, {
-      headers : new HttpHeaders({
-        authorization : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Yzg5MDJiZjE0MTJiYjAwMTcxOGIzYmMiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTUyNjU3NDQ0fQ.VRmR3q7UJpKgMYDq2Ml2riHNpsDIU65Hc8mClk21qe0'
-      })
-    });
+    return this.http.get(this.userUrl);
   }
 
   login(body){

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AdminService } from './../../admin.service';
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
@@ -34,7 +35,7 @@ export class AdminUsersComponent {
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
-    constructor(private http: HttpClient, private adminService: AdminService) {
+    constructor(private http: HttpClient, private adminService: AdminService, private router  : Router) {
         this.renderData();
     }
 
@@ -44,6 +45,12 @@ export class AdminUsersComponent {
             this.dataSource = new MatTableDataSource(data);
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
+        },
+        (err) => {
+            console.log('Unauthorized ', err.status);
+            if(err.status == 401){
+                this.router.navigate(['events']);
+            }
         })
     }
 

@@ -23,11 +23,10 @@ export class AdminLoginComponent implements OnInit {
     console.log(body);
     
     this.adminService.login(body).subscribe(data => {
-      console.log(data);
-      console.log(data.body);
-      console.log(data.headers);
-      console.log(data.headers.get('authorization'));
-      
+      let token = data.headers.get('authorization');
+      console.log(token);
+
+      localStorage.setItem('token', token);
     });
   }
 

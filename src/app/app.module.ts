@@ -6,9 +6,13 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorService } from './token-interceptor.service';
+ 
 @NgModule({
     declarations: [
         AppComponent,
+
     ],
     imports: [
         AppRoutingModule,
@@ -17,7 +21,11 @@ import { SharedModule } from './shared/shared.module';
         BrowserModule,
         BrowserAnimationsModule
     ],
-    providers: [],
+    providers: [ {
+        provide : HTTP_INTERCEPTORS,
+        useClass : TokenInterceptorService ,
+        multi: true
+    }],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

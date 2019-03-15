@@ -36,7 +36,7 @@ export class NavbarComponent{
         this.loggedIn = true;
         this.message = ' ';     
         this.close();
-        var token = data.headers.get('Authorization').split(' ')[1];
+        var token = data.headers.get('Authorization');
         console.log(token);
         localStorage.setItem('token',token);
         this.router.navigate(['events']);
