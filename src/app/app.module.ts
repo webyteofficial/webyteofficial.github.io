@@ -12,7 +12,6 @@ import { TokenInterceptorService } from './token-interceptor.service';
 @NgModule({
     declarations: [
         AppComponent,
-
     ],
     imports: [
         AppRoutingModule,

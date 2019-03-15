@@ -1,0 +1,35 @@
+<section id="signup">
+  <div class="wrapper">
+    <form class="form" (ngSubmit) = "add()">
+      <div class="card-header text-center">
+        <h3 class="card-title title-up">Add Event</h3>
+      </div>
+      <div class="row">
+        <div class="input-group col-md-12">
+          <input type="text" class="form-control" name = "name" placeholder="Name..." [(ngModel)] = "name">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-group col-md-12">
+          <textarea name = "enrollment" class="form-control" placeholder="Description..." [(ngModel)] = "description"></textarea>
+        </div>
+      </div>
+          
+      <div class="row">
+        <div class="input-group col-md-12">
+          <input type="text" name = "contact" class="form-control" placeholder="contact..." [(ngModel)] = "contact">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-group col-md-12">
+          <input type="text" name = "image" class="form-control" placeholder="image name..." [(ngModel)] = "image">
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <button type="submit" class="btn1"> Add event </button>
+      </div>
+    </form>
+  </div>
+</section>
