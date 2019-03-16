@@ -5,24 +5,36 @@
         <h3 class="card-title title-up">Add Event</h3>
       </div>
       <div class="row">
+        <div class="input-group col-md-2">
+          <label for="name"> Name </label>
+        </div>
         <div class="input-group col-md-12">
           <input type="text" class="form-control" name = "name" placeholder="Name..." [(ngModel)] = "name">
         </div>
       </div>
-
+      
       <div class="row">
+        <div class="input-group col-md-2">
+          <label for="enrollment"> Description </label>
+        </div>
         <div class="input-group col-md-12">
-          <textarea name = "enrollment" class="form-control" placeholder="Description..." [(ngModel)] = "description"></textarea>
+          <textarea name = "description" class="form-control" placeholder="Description..." [(ngModel)] = "description"></textarea>
         </div>
       </div>
           
       <div class="row">
+        <div class="input-group col-md-2">
+          <label for="contact"> Contact </label>
+        </div>
         <div class="input-group col-md-12">
           <input type="text" name = "contact" class="form-control" placeholder="contact..." [(ngModel)] = "contact">
         </div>
       </div>
 
       <div class="row">
+        <div class="input-group col-md-2">
+          <label for="image">Image Url</label>
+        </div>
         <div class="input-group col-md-12">
           <input type="text" name = "image" class="form-control" placeholder="image name..." [(ngModel)] = "image">
         </div>

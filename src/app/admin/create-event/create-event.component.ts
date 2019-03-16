@@ -14,7 +14,7 @@ export class CreateEventComponent {
 
   constructor(private adminService: AdminService) { }
 
-  register() {
+  add() {
     var body = {
       name : this.name,
       description : this.description,

@@ -19,4 +19,12 @@ export class AdminService {
   addEvent(body){
     return this.http.post(environment.api + '/event', body);
   }
+
+  getEvents(){
+    return this.http.get(environment.api + '/events');
+  }
+
+  deleteEvent(id){
+    return this.http.delete(environment.api + '/event/' + id);
+  }
 }

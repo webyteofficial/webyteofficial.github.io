@@ -1,3 +1,4 @@
+import { AdminService } from './../../admin.service';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 declare var TweenMax, Power0;
 
@@ -7,11 +8,35 @@ declare var TweenMax, Power0;
   styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit, AfterViewInit {
+  // events = [
+  //   { name : 'Hackathon', image : 'hackathon.svg'},
+  //   { name : 'App Development', image : 'appdevelopment.svg'},
+  //   { name : 'Find the bug', image : 'findbug.svg'},
+  //   { name : 'Data Scrapping', image : 'datascrapping.svg'},
+  //   { name : 'Code Couples', image : 'codecouples.svg'},
+  // ]
 
-  constructor() { }
+    events;
+
+  constructor(private adminService : AdminService) { 
+    this.getEvents()
+  }
+
+  
+  getEvents(){
+    this.adminService.getEvents().subscribe(data =>{ 
+      console.log(data);
+      this.events = data;
+    },
+    (err) => {
+      console.log(err);
+    });
+  }
 
   ngOnInit() {
   }
+
+  
 
   ngAfterViewInit(){
     var header = document.getElementsByTagName('header')[0];
