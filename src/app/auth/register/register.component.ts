@@ -37,7 +37,7 @@ export class RegisterComponent  {
             console.log('into the subscription');
             console.log(data);
             this.open()
-            if (data && data['email'] == this.email) {
+            if (data && data.body['email'] == this.email) {
                 this.open();
             }
             else {

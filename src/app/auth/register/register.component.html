@@ -18,7 +18,7 @@
 								<img src="./../../assets/svg/first.svg" alt="">
 							</span>
 						</div>
-						<input type="text" class="form-control" name = "fname" placeholder="First Name..." [(ngModel)] = "firstname">
+						<input type="text" class="form-control" name = "fname" placeholder="First Name..." [(ngModel)] = "firstname" #nameInput required>
 					</div>
 					<div class="input-group col-md-6">
 						<div class="input-group-prepend">
@@ -48,7 +48,7 @@
 									<img src="./../../assets/svg/mail.svg" alt="">
 							</span>
 						</div>
-						<input type="text" name = "email" class="form-control" placeholder="Email..." [(ngModel)] = "email">
+						<input type="text" name = "email" class="form-control" placeholder="Email..." [(ngModel)] = "email" #emailInput>
 					</div>
 				</div>
 				<div class="row">

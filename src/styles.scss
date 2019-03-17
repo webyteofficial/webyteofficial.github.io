@@ -4,14 +4,7 @@
 // @import url('https://fonts.googleapis.com/css?family=Nova+Mono');
 
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
-
-$primary : #2bdbff;
-$primaryLight : #78ffff;
-$primaryDark : #00a9cc;
-
-$secondary: #ffc107;
-$secondaryLight : #fff350;
-$secondaryDark : #c79100;
+@import './app/shared/variables.scss';
 
 body {
   font-family: 'Montserrat', sans-serif;

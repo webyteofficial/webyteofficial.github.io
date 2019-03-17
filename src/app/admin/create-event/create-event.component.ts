@@ -11,6 +11,10 @@ export class CreateEventComponent {
   description : string;
   contact : string;
   image :string;
+  rules : string[] = [];
+  rule : string;
+  success : boolean = false;
+  error : boolean = false;
 
   constructor(private adminService: AdminService) { }
 
@@ -20,14 +24,31 @@ export class CreateEventComponent {
       description : this.description,
       contact : this.contact,
       image : this.image,
-      rules : ['abhishek']
+      rules : this.rules
     }
 
     console.log(body);
     this.adminService.addEvent(body).subscribe(data => {
         console.log('into the subscription');
         console.log(data);
+        if(data['name'] == this.name ){
+          this.success = true;
+          this.name = '';
+          this.description = '';
+          this.contact = '';
+          this.image = '';
+          this.rules = [];
+        }
     },
-    error => console.log("error occured"))
+    error => {
+      console.log("error occured");
+      this.error = true;
+    })
+  }
+
+  pushRule(){
+    this.rules.push(this.rule);
+    console.log(this.rules);
+    this.rule = '';
   }
 }

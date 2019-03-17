@@ -13,11 +13,11 @@ export class AdminService {
   }
 
   login(body){
-    return this.http.post(environment.api + '/admin/login', body, { observe : 'response'});
+    return this.http.post(environment.api + '/admins/login', body, { observe : 'response'});
   }
   
   addEvent(body){
-    return this.http.post(environment.api + '/event', body);
+    return this.http.post(environment.api + '/events', body);
   }
 
   getEvents(){
@@ -25,6 +25,6 @@ export class AdminService {
   }
 
   deleteEvent(id){
-    return this.http.delete(environment.api + '/event/' + id);
+    return this.http.delete(environment.api + '/events/' + id);
   }
 }

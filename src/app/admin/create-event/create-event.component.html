@@ -21,6 +21,16 @@
           <textarea name = "description" class="form-control" placeholder="Description..." [(ngModel)] = "description"></textarea>
         </div>
       </div>
+      
+      <div class="row">
+        <div class="input-group col-md-2">
+          <label for="enrollment"> Rules </label>
+        </div>
+        <div class="input-group col-md-12">
+          <textarea name = "rules" class="form-control" placeholder="Rules..." [(ngModel)] = "rule"></textarea>
+          <div class="col-md-1 btn btn-warning" (click) = "pushRule()"> + </div>
+        </div>
+      </div>
           
       <div class="row">
         <div class="input-group col-md-2">
@@ -42,6 +52,8 @@
       <div class="card-footer text-center">
         <button type="submit" class="btn1"> Add event </button>
       </div>
+      <small *ngIf = "success" [ngStyle]="{'color' : '#9ffd12'}" class="text-center"> Event Added Successfully </small>
+      <small *ngIf = "error" [ngStyle]="{'color' : '#ff2424'}" class="text-center"> Error Occured  </small>
     </form>
   </div>
 </section>

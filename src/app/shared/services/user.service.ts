@@ -2,7 +2,6 @@ import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from './../../../environments/environment';
-import { tap } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -16,14 +15,14 @@ export class UserService implements OnInit {
     }
 
     register(body: Object) {
-        return this.http.post(environment.api + '/user', body, {
+        return this.http.post(environment.api + '/users', body, {
             observe: 'response'
         });
 
     }
 
     login(body){
-        return this.http.post(environment.api + '/user/login', body, { observe: 'response'})
+        return this.http.post(environment.api + '/users/login', body, { observe: 'response'})
     }
 
 

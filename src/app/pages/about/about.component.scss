@@ -1,1 +1,17 @@
 @import url('./../../../assets/css/material-kit.css');
+
+$primary : #2bdbff;
+$primaryLight : #78ffff;
+$primaryDark : #00a9cc;
+
+$secondary: #ffc107;
+$secondaryLight : #fff350;
+$secondaryDark : #c79100;
+
+.title{
+    color: $primaryDark;
+}
+.card-title{
+    color: $primaryDark;
+    font-family: Metropolis;
+}
