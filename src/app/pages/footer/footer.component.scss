@@ -18,3 +18,9 @@ img.phone{
     color: $primary;
     font-family: Metropolis;
 }
+
+@media (max-width : '840px'){
+    .col-md-4{
+        margin-bottom: 50px;
+    }
+}

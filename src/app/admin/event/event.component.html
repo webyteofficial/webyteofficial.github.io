@@ -1,0 +1,44 @@
+<section id="event" class="wrapper">
+  <div *ngIf="event">
+    <div class="row">
+      <div class="col-md-12">
+        Name
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10" class="data">
+        {{ event.name }}
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        Description
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" class="data">
+          {{ event.description }}
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12">
+          Rules
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" class="data">
+          <div class="col-md-12" *ngFor="let rule of event.rules">
+            {{ rule }}
+          </div>
+      </div>
+    </div>
+    
+
+  </div>
+  
+</section>

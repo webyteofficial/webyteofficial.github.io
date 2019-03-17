@@ -7,6 +7,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { GetEventsComponent } from './get-events/get-events.component';
+import { EventComponent } from './event/event.component';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import { GetEventsComponent } from './get-events/get-events.component';
         AdminUsersComponent,
         AdminDashboardComponent,
         CreateEventComponent,
-        GetEventsComponent
+        GetEventsComponent,
+        EventComponent
     ],
     imports: [
         CoreModule,
@@ -24,6 +26,7 @@ import { GetEventsComponent } from './get-events/get-events.component';
             { path: 'dashboard', component: AdminDashboardComponent },
             { path: 'create-event', component: CreateEventComponent },
             { path: 'events', component: GetEventsComponent },
+            { path: 'events/:id', component: EventComponent },
         ])
     ]
 })

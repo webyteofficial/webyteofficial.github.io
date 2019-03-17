@@ -27,4 +27,12 @@ export class AdminService {
   deleteEvent(id){
     return this.http.delete(environment.api + '/events/' + id);
   }
+
+  deleteUser(id){
+    return this.http.delete(environment.api + '/users/' + id);
+  }
+
+  getEvent(id){
+    return this.http.get(environment.api + '/events/' + id);
+  }
 }

@@ -29,7 +29,7 @@ export class AdminUsersComponent {
         }
     ]
 
-    displayedColumns: string[] = ['enrollment', 'fullName', 'email', 'phone', 'gender'];
+    displayedColumns: string[] = ['enrollment', 'fullName', 'email', 'phone', 'gender', 'delete'];
     dataSource: MatTableDataSource<User>;
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -62,4 +62,11 @@ export class AdminUsersComponent {
         }
     }
 
+    delete(id){
+        console.log(id);
+        this.adminService.deleteUser(id).subscribe(data => {
+            console.log(data);
+            this.renderData();
+        })
+    }
 }

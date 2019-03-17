@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AdminService } from './../../admin.service';
 import { Component } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class GetEventsComponent {
   events;
-  constructor(private adminService : AdminService) { 
+  constructor(private adminService : AdminService, private router : Router) { 
     this.getEvents();
   }
 
@@ -34,4 +35,8 @@ export class GetEventsComponent {
     })
   }
 
+  eventInfo(id){
+    console.log(id);
+    this.router.navigate(['/admin/events',id]);
+  }
 }
