@@ -7,7 +7,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { TokenInterceptorService } from './token-interceptor.service';
+import { TokenInterceptorService } from './shared/token-interceptor.service';
  
 @NgModule({
     declarations: [

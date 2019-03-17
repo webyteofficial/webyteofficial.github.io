@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { AdminService } from './../../admin.service';
+import { AdminService } from '../../shared/services/admin.service';
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { HttpClient } from '@angular/common/http';

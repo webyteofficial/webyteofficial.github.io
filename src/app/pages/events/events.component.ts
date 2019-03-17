@@ -1,4 +1,4 @@
-import { AdminService } from './../../admin.service';
+import { AdminService } from '../../shared/services/admin.service';
 import { Component, AfterViewInit } from '@angular/core';
 declare var TweenMax, Power0;
 

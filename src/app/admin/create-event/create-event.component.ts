@@ -1,4 +1,4 @@
-import { AdminService } from './../../admin.service';
+import { AdminService } from '../../shared/services/admin.service';
 import { Component } from '@angular/core';
 
 @Component({

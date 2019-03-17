@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AdminService } from './../../admin.service';
+import { AdminService } from '../../shared/services/admin.service';
 
 @Component({
   selector: 'app-event',
