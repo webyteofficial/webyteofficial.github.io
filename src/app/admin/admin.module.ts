@@ -1,3 +1,4 @@
+import { AuthGuard } from './../shared/guard/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from '../core/core.module';
@@ -22,11 +23,11 @@ import { EventComponent } from './event/event.component';
         CoreModule,
         RouterModule.forChild([
             { path: 'login', component: AdminLoginComponent },
-            { path: 'users', component: AdminUsersComponent },
-            { path: 'dashboard', component: AdminDashboardComponent },
-            { path: 'create-event', component: CreateEventComponent },
-            { path: 'events', component: GetEventsComponent },
-            { path: 'events/:id', component: EventComponent },
+            { path: 'users', component: AdminUsersComponent, canActivate : [AuthGuard]  },
+            { path: 'dashboard', component: AdminDashboardComponent, canActivate : [AuthGuard] },
+            { path: 'create-event', component: CreateEventComponent, canActivate : [AuthGuard] },
+            { path: 'events', component: GetEventsComponent, canActivate : [AuthGuard] },
+            { path: 'events/:id', component: EventComponent, canActivate : [AuthGuard]},
         ])
     ]
 })

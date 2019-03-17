@@ -34,7 +34,6 @@ export class RegisterComponent  {
           }
 
         this.userService.register(body).subscribe(data => {
-            console.log('into the subscription');
             console.log(data);
             this.open()
             if (data && data.body['email'] == this.email) {
@@ -43,8 +42,7 @@ export class RegisterComponent  {
             else {
                 this.displayDuplicate = true;
             }
-        },
-        error => console.log("error occured"))
+        })
     }
 
     open(){
