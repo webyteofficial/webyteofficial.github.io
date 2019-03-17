@@ -28,6 +28,7 @@ export class NavbarComponent{
       password : this.password
     }
 
+    console.log(body);
     this.userService.login(body).subscribe(data => {
       console.log('into the subscription');
       console.log(data);
@@ -48,7 +49,10 @@ export class NavbarComponent{
         this.message  = "Invalid Password";
       }
     },
-    error => console.log("error occured"))
+    error => {
+      console.log(error);
+      console.log("error occured")
+    })
   }
 
   open(){

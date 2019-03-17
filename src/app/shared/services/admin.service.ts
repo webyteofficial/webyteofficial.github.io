@@ -11,7 +11,7 @@ export class AdminService {
   getUsers(){
     return this.http.get(environment.api + '/users');
   }
-
+  
   login(body){
     return this.http.post(environment.api + '/admins/login', body, { observe : 'response'});
   }
@@ -19,7 +19,7 @@ export class AdminService {
   addEvent(body){
     return this.http.post(environment.api + '/events', body);
   }
-
+  
   getEvents(){
     return this.http.get(environment.api + '/events');
   }
