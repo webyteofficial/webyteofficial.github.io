@@ -10,8 +10,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
-
 import { NavbarComponent } from './navbar/navbar.component';
+import {MatSortModule} from '@angular/material/sort';
 
 const MODULES = [
     CommonModule,
@@ -25,6 +25,7 @@ const MODULES = [
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
+    MatSortModule
 ]
 
 const COMPONENTS = [

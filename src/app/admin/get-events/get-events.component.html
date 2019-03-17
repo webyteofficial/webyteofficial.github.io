@@ -1,0 +1,7 @@
+<section id="events" class="wrapper">
+  <div class="event" *ngFor = "let event of events">
+   <h3>  {{ event.name }} </h3>
+   <button class="btn btn-warn" (click)="deleteEvent(event._id)">Delete</button>
+   <button class="btn btn-primary" (click)="eventInfo(event._id)">Info</button>
+  </div>
+</section>

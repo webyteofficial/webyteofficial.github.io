@@ -4,12 +4,12 @@
       <path id="logofill" d="M218.5,77l-12.9,22.3l-9.2-5.8l36-62.3L216.2,1.1l-49.4,40.5h-63L89,61L0.5,41.5v44.9l19.4,6l0.3,18.4
           L37,98.5l8.9,24.7l14.2-18.4l8.7,15.5l12.6-8.7l21,31.5l-36.8,1.3l-0.5,14.7l-16.5,4.5l-15.8-15.5l-1.6,22.3l-14.2,5l13.7,20.2
           l69.1-8.9l64.9,56.7l101.4-1.3V110.9L218.5,77z M115.8,80c-5.2,0-9.3-4.2-9.3-9.3c0-5.2,4.2-9.3,9.3-9.3c5.2,0,9.3,4.2,9.3,9.3
-          C125.1,75.8,121,80,115.8,80z M191.2,76.7l-5.5,5.5L167.6,66l22.1-20.8l5.8,5l-16,15L191.2,76.7z" />
+          C125.1,75.8,121,80,115.8,80z M191.2,76.7l-5.5,5.5L167.6,66l22.1-20.8l5.8,5l-16,15L191.2,76.7z"/>
       <path id="logostroke" s d="M219.3,80.6l-12.8,22.2l-13.4-8.5l36.5-63.1L215.4,4.9L167.7,44L105,44L90.1,63.8L3,44.7
         v39.9l19.4,6.1l0.2,15.3l15.6-11.4l8.5,23.6l13.7-17.8l9.2,16.4l12.4-8.6l24.9,37.4l-38.9,1.4l-0.5,14.3l-19.7,5.3l-12.9-12.7
         l-1.3,18.5L21,176.9L32,193l68.6-8.9l65.1,56.9l97.7-1.3l0.1-127.6L219.3,80.6z M115.6,82.6c-6.6,0-11.9-5.3-11.9-11.9
         s5.3-11.9,11.9-11.9s11.9,5.3,11.9,11.9S122.2,82.6,115.6,82.6z M163.9,65.9l25.6-24.1l9.6,8.3l-16,15.1l11.7,11.5l-9.1,8.9
-        L163.9,65.9z" />
+        L163.9,65.9z"/>
     </svg>
     <h1>WeByte</h1>
   </div>
@@ -18,18 +18,34 @@
   <input type="checkbox" id="toggle">
    -->
   <nav class="nav-bar">
-    <span *ngFor="let page of pages">
-      <a [routerLink]="page?.path">
+    <span>
+      <a routerLink="events">
         <svg class="button" width="120" height="50">
-          <rect x="5" y="5" class="border" width="110" height="40" />
+            <rect x="5" y="5" class="border" width="110" height="40"/>
         </svg>
-        <span>{{page.name}}</span>
+        <span>Events</span>
+      </a>
+    </span>
+    <span>
+      <a routerLink="about">
+        <svg class="button" width="120" height="50">
+          <rect x="5" y="5" class="border" width="110" height="40"/>
+        </svg>
+        <span>About</span>
+      </a>
+    </span>
+    <span>
+      <a routerLink="auth/registration">
+        <svg class="button" width="120" height="50">
+            <rect x="0" y="5" class="border" width="110" height="40"/>
+        </svg>
+        <span>Register</span>
       </a>
     </span>
     <span>
       <a (click)="open()">
         <svg class="button" width="120" height="50">
-          <rect x="0" y="5" class="border" width="110" height="40" />
+            <rect x="0" y="5" class="border" width="110" height="40"/>
         </svg>
         <span>Login</span>
       </a>
@@ -38,37 +54,39 @@
 </header>
 
 <div class="overlay" #overlay>
-  <div class="close" (click)="close()">
+  <div class="close" (click) ="close()">
     X
   </div>
-  <form class="form" method="" action="">
-    <div class="card-header text-center">
-      <h3 class="card-title title-up">Log In</h3>
-    </div>
-
-    <div class="row">
-      <div class="input-group col-md-12">
-        <div class="input-group-prepend">
-          <span class="input-group-text">
-            <img src="assets/img/icons/mail.svg" alt="">
-          </span>
-        </div>
-        <input type="text" class="form-control" placeholder="Email...">
+  <form class="form" (ngSubmit)="login()">
+      <div class="card-header text-center">
+        <h3 class="card-title title-up">Log In</h3>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="input-group no-border col-md-12">
-        <div class="input-group-prepend">
-          <span class="input-group-text">
-            <img src="assets/img/icons/key.svg" alt="">
-          </span>
+    
+      <div class="row">
+        <div class="input-group col-md-12">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+                <img src="./../../assets/svg/mail.svg" alt="">
+            </span>
+          </div>
+          <input type="text" name = "email" class="form-control" placeholder="Email..." [(ngModel)] = "email">
         </div>
-        <input type="password" class="form-control" placeholder="Password...">
       </div>
-    </div>
-    <div class="card-footer text-center">
-      <a href="#pablo" class="btn1">Login</a>
-    </div>
-  </form>
+      
+      <div class="row">
+        <div class="input-group no-border col-md-12">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <img src="./../../assets/svg/key.svg" alt="">
+            </span>
+          </div>
+          <input type="password" name = "password" class="form-control" placeholder="Password..." [(ngModel)] = "password">
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <button type="submit" class="btn1"> Login </button>
+      </div>
+      <small *ngIf = "message != ' '" [ngStyle]="{'color' : '#d50000'}" id="errorLogin"> {{ message }} </small>
+
+    </form>
 </div>

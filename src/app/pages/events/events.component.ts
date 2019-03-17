@@ -1,4 +1,5 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { AdminService } from '../../shared/services/admin.service';
+import { Component, AfterViewInit } from '@angular/core';
 declare var TweenMax, Power0;
 
 @Component({
@@ -6,11 +7,30 @@ declare var TweenMax, Power0;
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.scss']
 })
-export class EventsComponent implements OnInit, AfterViewInit {
+export class EventsComponent implements AfterViewInit {
+  // events = [
+  //   { name : 'Hackathon', image : 'hackathon.svg'},
+  //   { name : 'App Development', image : 'appdevelopment.svg'},
+  //   { name : 'Find the bug', image : 'findbug.svg'},
+  //   { name : 'Data Scrapping', image : 'datascrapping.svg'},
+  //   { name : 'Code Couples', image : 'codecouples.svg'},
+  // ]
 
-  constructor() { }
+    events;
 
-  ngOnInit() {
+  constructor(private adminService : AdminService) { 
+    this.getEvents()
+  }
+
+  
+  getEvents(){
+    this.adminService.getEvents().subscribe(data =>{ 
+      console.log(data);
+      this.events = data;
+    },
+    (err) => {
+      console.log(err);
+    });
   }
 
   ngAfterViewInit(){

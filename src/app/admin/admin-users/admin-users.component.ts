@@ -1,13 +1,14 @@
-import { AdminService } from './../../admin.service';
+import { Router } from '@angular/router';
+import { AdminService } from '../../shared/services/admin.service';
 import { Component, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 
 interface User {
-    phone: string,
-    email: string,
     firstname: string,
     lastname: string,
+    phone: string,
+    email: string,
     enrollment: string,
     gender: string
 }
@@ -28,23 +29,29 @@ export class AdminUsersComponent {
         }
     ]
 
-    displayedColumns: string[] = ['email', 'enrollment', 'firstname', 'phone', 'lastname', 'gender'];
+    displayedColumns: string[] = ['enrollment', 'fullName', 'email', 'phone', 'gender', 'delete'];
     dataSource: MatTableDataSource<User>;
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
-    constructor(private http: HttpClient, private adminService: AdminService) {
+    constructor(private http: HttpClient, private adminService: AdminService, private router  : Router) {
         this.renderData();
     }
 
     renderData() {
-        // this.adminService.getUsers().subscribe((data : User[]) => {
-        console.log(this.data);
-        this.dataSource = new MatTableDataSource(this.data);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-        // })
+        this.adminService.getUsers().subscribe((data : User[]) => {
+            console.log(data);
+            this.dataSource = new MatTableDataSource(data);
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+        },
+        (err) => {
+            console.log('Unauthorized ', err.status);
+            if(err.status == 401){
+                this.router.navigate(['events']);
+            }
+        })
     }
 
 
@@ -55,4 +62,11 @@ export class AdminUsersComponent {
         }
     }
 
+    delete(id){
+        console.log(id);
+        this.adminService.deleteUser(id).subscribe(data => {
+            console.log(data);
+            this.renderData();
+        })
+    }
 }

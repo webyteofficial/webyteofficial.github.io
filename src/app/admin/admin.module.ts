@@ -4,17 +4,29 @@ import { CoreModule } from '../core/core.module';
 
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { GetEventsComponent } from './get-events/get-events.component';
+import { EventComponent } from './event/event.component';
 
 @NgModule({
     declarations: [
         AdminLoginComponent,
         AdminUsersComponent,
+        AdminDashboardComponent,
+        CreateEventComponent,
+        GetEventsComponent,
+        EventComponent
     ],
     imports: [
         CoreModule,
         RouterModule.forChild([
-            { path: 'admin/login', component: AdminLoginComponent },
-            { path: 'admin/users', component: AdminUsersComponent },
+            { path: 'login', component: AdminLoginComponent },
+            { path: 'users', component: AdminUsersComponent },
+            { path: 'dashboard', component: AdminDashboardComponent },
+            { path: 'create-event', component: CreateEventComponent },
+            { path: 'events', component: GetEventsComponent },
+            { path: 'events/:id', component: EventComponent },
         ])
     ]
 })

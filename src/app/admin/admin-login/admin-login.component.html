@@ -29,7 +29,7 @@
       <div class="card-footer text-center">
         <button type="submit" class="btn1"> Login </button>
       </div>
-      <small *ngIf = "message != ' '" [ngStyle]="{'color' : '#d50000'}" id="errorLogin"> {{ message }} </small>
+      <small *ngIf = "displatMessage" [ngStyle]="{'color' : '#d50000'}" id="errorLogin"> Invalid credentials or netword problem </small>
   </form>
   <div class="col-md-2"></div>
   

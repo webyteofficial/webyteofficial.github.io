@@ -1,5 +1,6 @@
-import { AdminService } from './../../admin.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AdminService } from '../../shared/services/admin.service';
 
 @Component({
   selector: 'app-admin-login',
@@ -9,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class AdminLoginComponent implements OnInit {
   email:string;
   password: string;
-  constructor(private adminService : AdminService) { }
+  displatMessage : boolean = false; 
+  constructor(private adminService : AdminService, private router : Router) { }
 
   ngOnInit() {
   }
@@ -23,7 +25,14 @@ export class AdminLoginComponent implements OnInit {
     console.log(body);
     
     this.adminService.login(body).subscribe(data => {
-      console.log(data);
+      let token = data.headers.get('authorization');
+      console.log(token);
+      localStorage.setItem('token', token);
+      this.router.navigate(['admin/dashboard']);
+    },
+    (err) => {
+      console.log(err);
+      this.displatMessage = true;
     });
   }
 

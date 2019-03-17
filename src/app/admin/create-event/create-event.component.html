@@ -1,0 +1,59 @@
+<section id="signup">
+  <div class="wrapper">
+    <form class="form" (ngSubmit) = "add()">
+      <div class="card-header text-center">
+        <h3 class="card-title title-up">Add Event</h3>
+      </div>
+      <div class="row">
+        <div class="input-group col-md-2">
+          <label for="name"> Name </label>
+        </div>
+        <div class="input-group col-md-12">
+          <input type="text" class="form-control" name = "name" placeholder="Name..." [(ngModel)] = "name">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-group col-md-2">
+          <label for="enrollment"> Description </label>
+        </div>
+        <div class="input-group col-md-12">
+          <textarea name = "description" class="form-control" placeholder="Description..." [(ngModel)] = "description"></textarea>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-group col-md-2">
+          <label for="enrollment"> Rules </label>
+        </div>
+        <div class="input-group col-md-12">
+          <textarea name = "rules" class="form-control" placeholder="Rules..." [(ngModel)] = "rule"></textarea>
+          <div class="col-md-1 btn btn-warning" (click) = "pushRule()"> + </div>
+        </div>
+      </div>
+          
+      <div class="row">
+        <div class="input-group col-md-2">
+          <label for="contact"> Contact </label>
+        </div>
+        <div class="input-group col-md-12">
+          <input type="text" name = "contact" class="form-control" placeholder="contact..." [(ngModel)] = "contact">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-group col-md-2">
+          <label for="image">Image Url</label>
+        </div>
+        <div class="input-group col-md-12">
+          <input type="text" name = "image" class="form-control" placeholder="image name..." [(ngModel)] = "image">
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <button type="submit" class="btn1"> Add event </button>
+      </div>
+      <small *ngIf = "success" [ngStyle]="{'color' : '#9ffd12'}" class="text-center"> Event Added Successfully </small>
+      <small *ngIf = "error" [ngStyle]="{'color' : '#ff2424'}" class="text-center"> Error Occured  </small>
+    </form>
+  </div>
+</section>
