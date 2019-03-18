@@ -1,8 +1,18 @@
 @import url('./../../../assets/css/material-kit.css');
 @import "./../../shared/variables.scss";
 
+.row>* {
+  margin-top: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
 footer {
   background: #151416;
+
+  p {
+    margin: 0 !important;
+  }
 }
 
 .credits {
@@ -11,35 +21,65 @@ footer {
 
 .socials {
   li {
-    &:hover a {
-      transform: rotateY(180deg);
-      transition: 300ms;
+    a {
+      padding: 9px !important;
 
       img {
-        transform: rotateY(-180deg);
-        transform-origin: center center;
+        height: 18px;
+        width: 18px;
+        transition: 300ms;
       }
     }
-  }
 
-  a {
-    display: inline-block;
-    border-radius: 50% !important;
-    border: 1px solid $primary;
-    padding: 8px !important;
-    transition: 300ms;
-
-    img {
-      height: 16px;
-      width: 16px;
+    a::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50% !important;
+      border: 1px solid $primary;
       transition: 300ms;
+      height: 36px;
+      width: 36px;
     }
 
-
+    &:hover a::after {
+      transform: rotateY(180deg);
+      transition: 300ms;
+    }
   }
 
 
 }
+
+// .socials {
+//   li {
+//     &:hover a {
+//       transform: rotateY(180deg);
+//       transition: 300ms;
+
+//       img {
+//         transform: rotateY(180deg);
+//       }
+//     }
+//   }
+
+//   a {
+//     display: inline-flex;
+//     border-radius: 50% !important;
+//     border: 1px solid $primary;
+//     padding: 7px 8px !important;
+//     transition: 300ms;
+//     justify-content: center;
+//     align-items: center;
+
+//     img {
+//       height: 16px;
+//       width: 16px;
+//       transition: 300ms;
+//     }
+//   }
+// }
 
 // img.phone {
 //   width: 60px;

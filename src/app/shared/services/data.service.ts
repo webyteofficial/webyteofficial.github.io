@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class DataService {
+    public getTeam = () => this.team;
     public getSocials = () => this.socials;
     public getPages = () => this.pages;
 
@@ -22,5 +23,74 @@ export class DataService {
         { media: 'instagram', url: 'https://instagram.com/webyteofficial' },
         { media: 'facebook', url: 'https://facebook.com/webyteofficial' },
         { media: 'twitter', url: 'https://twitter.com/webyteofficial' },
+    ]
+
+    private team = [
+        {
+            name: "Murtaza Nazir",
+            designation: "Ex-President/Co-Founder",
+            type: 'Prominence',
+            socials: [
+                { media: 'facebook', url: 'https://facebook.com/' },
+                { media: 'instagram', url: 'https://instagram.com/' },
+                { media: 'twitter', url: 'https://twitter.com/' },
+                { media: 'github', url: 'https://github.com/' },
+            ]
+        },
+        {
+            name: "Wajid Manzoor",
+            designation: "Co-Founder",
+            type: 'Prominence',
+            socials: [
+                { media: 'facebook', url: 'https://facebook.com/' },
+                { media: 'instagram', url: 'https://instagram.com/' },
+                { media: 'twitter', url: 'https://twitter.com/' },
+                { media: 'github', url: 'https://github.com/' },
+            ]
+        },
+        {
+            name: "Md. Mobshshir Nayeem",
+            designation: "President",
+            type: 'Prominence',
+            socials: [
+                { media: 'facebook', url: 'https://facebook.com/' },
+                { media: 'instagram', url: 'https://instagram.com/' },
+                { media: 'twitter', url: 'https://twitter.com/' },
+                { media: 'github', url: 'https://github.com/' },
+            ]
+        },
+        {
+            name: "Ritesh Ganjewala",
+            designation: "Web Development Head",
+            type: 'Prime',
+            socials: [
+                { media: 'facebook', url: 'https://facebook.com/invinciblezeal' },
+                { media: 'instagram', url: 'https://instagram.com/_ganjewala_' },
+                { media: 'twitter', url: 'https://twitter.com/_ganjewala_' },
+                { media: 'github', url: 'https://github.com/invinciblezeal' },
+            ]
+        },
+        {
+            name: "Abhishek Rathore",
+            designation: "Web Developer",
+            type: 'Prime',
+            socials: [
+                { media: 'facebook', url: 'https://facebook.com/' },
+                { media: 'instagram', url: 'https://instagram.com/' },
+                { media: 'twitter', url: 'https://twitter.com/' },
+                { media: 'github', url: 'https://github.com/' },
+            ]
+        },
+        {
+            name: "Priyanshi Yadav",
+            designation: "Embedded/IOT",
+            type: 'Prime',
+            socials: [
+                { media: 'facebook', url: 'https://facebook.com/' },
+                { media: 'instagram', url: 'https://instagram.com/' },
+                { media: 'twitter', url: 'https://twitter.com/' },
+                { media: 'github', url: 'https://github.com/' },
+            ]
+        },
     ]
 }

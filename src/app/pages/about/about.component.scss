@@ -8,10 +8,12 @@ $secondary: #ffc107;
 $secondaryLight : #fff350;
 $secondaryDark : #c79100;
 
-.title{
-    color: $primaryDark;
+.title {
+  color: $primaryDark;
+  font-family: Montserrat;
 }
-.card-title{
-    color: $primaryDark;
-    font-family: Metropolis;
+
+.card-title {
+  color: $primaryDark;
+  font-family: Metropolis;
 }

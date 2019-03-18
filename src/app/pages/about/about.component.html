@@ -1,139 +1,52 @@
 <div class="team-1 wrapper" id="team-1">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-8 col-md-offset-2 text-center">
-				<h2 class="title">Our Awesome Team</h2>
-			</div>
-		</div>
+  <div class="container">
+    <h2 class="title text-center">Prominence</h2>
+    <div class="row justify-content-center">
 
-		<div class="row">
-			<div class="col-md-3">
-				<div class="card card-profile card-plain">
-					<div class="card-avatar">
-						<a href="#pablo">
-							<img class="img" src="assets/img/faces/marc.jpg" />
-						</a>
-					</div>
+      <div class="col-md-3" *ngFor="let member of team | teamFilter:'type':'Prominence'">
+        <div class="card card-profile card-plain">
+          <div class="card-avatar">
+            <a href={{member.socials[0].url}} target="_blank">
+              <img class="img" src="assets/img/faces/kendall.jpg" />
+            </a>
+          </div>
 
-					<div class="card-content">
-						<h4 class="card-title">Murtaza Nazir</h4>
-						<h6 class="category text-muted">Ex-President / Founder</h6>
+          <div class="card-content">
+            <h4 class="card-title">{{member.name}}</h4>
+            <h6 class="category text-muted">{{member.designation}}</h6>
 
-						<div class="footer">
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-facebook"><i class="fa fa-facebook-square"></i></a>
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-google"><i class="fa fa-google"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
+            <div class="footer">
+              <a href={{social.url}} target="_blank" class="btn btn-just-icon btn-simple btn-twitter" *ngFor="let social of member.socials">
+                <i class="fa fa-{{social.media}}"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-			
-			<div class="col-md-3">
-					<div class="card card-profile card-plain">
-						<div class="card-avatar">
-							<a href="#pablo">
-								<img class="img" src="assets/img/faces/kendall.jpg" />
-							</a>
-						</div>
-	
-						<div class="card-content">
-							<h4 class="card-title">Wajid Manjoor</h4>
-							<h6 class="category text-muted"> Founder </h6>
-	
-							<div class="footer">
-								<a href="#pablo" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
-								<a href="#pablo" class="btn btn-just-icon btn-simple btn-dribbble"><i class="fa fa-dribbble"></i></a>
-								<a href="#pablo" class="btn btn-just-icon btn-simple btn-linkedin"><i class="fa fa-linkedin"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
+    <h2 class="title text-center">Prime</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-3" *ngFor="let member of team | teamFilter:'type':'Prime'">
+        <div class="card card-profile card-plain">
+          <div class="card-avatar">
+            <a href={{member.socials[0].url}} target="_blank">
+              <img class="img" src="assets/img/faces/avatar.jpg" />
+            </a>
+          </div>
 
-			<div class="col-md-3">
-				<div class="card card-profile card-plain">
-					<div class="card-avatar">
-						<a href="#pablo">
-							<img class="img" src="assets/img/faces/kendall.jpg" />
-						</a>
-					</div>
+          <div class="card-content">
+            <h4 class="card-title">{{member.name}}</h4>
+            <h6 class="category text-muted">{{member.designation}}</h6>
 
-					<div class="card-content">
-						<h4 class="card-title">Md Mobshshir Nayeem</h4>
-						<h6 class="category text-muted"> President </h6>
-
-						<div class="footer">
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-dribbble"><i class="fa fa-dribbble"></i></a>
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-linkedin"><i class="fa fa-linkedin"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="card card-profile card-plain">
-					<div class="card-avatar">
-						<a href="#pablo">
-							<img class="img" src="assets/img/faces/christian.jpg" />
-						</a>
-					</div>
-
-					<div class="card-content">
-						<h4 class="card-title">Abhishek Rathore</h4>
-						<h6 class="category text-muted">Web Developer</h6>
-
-						<div class="footer">
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-facebook"><i class="fa fa-facebook-square"></i></a>
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-dribbble"><i class="fa fa-dribbble"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-2"></div>
-			<div class="col-md-4">
-				<div class="card card-profile card-plain">
-					<div class="card-avatar">
-						<a href="#pablo">
-							<img class="img" src="assets/img/faces/avatar.jpg" />
-						</a>
-					</div>
-
-					<div class="card-content">
-						<h4 class="card-title">Ritesh Ganjewala</h4>
-						<h6 class="category text-muted">Web Developer</h6>
-
-						<div class="footer">
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-google"><i class="fa fa-google"></i></a>
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-dribbble"><i class="fa fa-dribbble"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-md-4">
-				<div class="card card-profile card-plain">
-					<div class="card-avatar">
-						<a href="#pablo">
-							<img class="img" src="assets/img/faces/avatar.jpg" />
-						</a>
-					</div>
-
-					<div class="card-content">
-						<h4 class="card-title">Priyanshi Yadav</h4>
-						<h6 class="category text-muted">Embedded/IOT</h6>
-
-						<div class="footer">
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-google"><i class="fa fa-google"></i></a>
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
-							<a href="#pablo" class="btn btn-just-icon btn-simple btn-dribbble"><i class="fa fa-dribbble"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <div class="footer">
+              <a href={{social.url}} target="_blank" class="btn btn-just-icon btn-simple btn-twitter" *ngFor="let social of member.socials">
+                <i class="fa fa-{{social.media}}"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

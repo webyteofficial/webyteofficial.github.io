@@ -75,7 +75,8 @@
           <ul>
             <li class="mx-2" *ngFor="let social of socials">
               <a href="{{social.url}}" target="_blank">
-                <!-- <i class="fa fa-{{social.media}}"></i> -->
+                <!-- <i *ngIf="social.media !== 'facebook'; else facebook" class="fab fa-{{social.media}}"></i>
+                <ng-template #facebook><i class="fa fa-facebook-f"></i></ng-template> -->
                 <img src="assets/img/icons/{{social.media}}.svg" alt={{social.media}}>
               </a>
             </li>
