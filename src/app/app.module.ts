@@ -8,7 +8,7 @@ import { SharedModule } from './shared/shared.module';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './shared/token-interceptor.service';
- 
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -20,9 +20,9 @@ import { TokenInterceptorService } from './shared/token-interceptor.service';
         BrowserModule,
         BrowserAnimationsModule
     ],
-    providers: [ {
-        provide : HTTP_INTERCEPTORS,
-        useClass : TokenInterceptorService ,
+    providers: [{
+        provide: HTTP_INTERCEPTORS,
+        useClass: TokenInterceptorService,
         multi: true
     }],
     bootstrap: [AppComponent]
