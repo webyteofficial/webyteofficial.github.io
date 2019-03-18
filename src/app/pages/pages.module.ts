@@ -7,8 +7,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { EventsComponent } from './events/events.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
-import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
     declarations: [
@@ -16,8 +14,6 @@ import { LandingComponent } from './landing/landing.component';
         ContactComponent,
         EventsComponent,
         HomeComponent,
-        FooterComponent,
-        LandingComponent,
     ],
     imports: [
         CoreModule,
