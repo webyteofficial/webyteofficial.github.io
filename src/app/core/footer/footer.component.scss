@@ -1,0 +1,63 @@
+@import url('./../../../assets/css/material-kit.css');
+@import "./../../shared/variables.scss";
+
+footer {
+  background: #151416;
+}
+
+.credits {
+  text-align: center;
+}
+
+.socials {
+  li {
+    &:hover a {
+      transform: rotateY(180deg);
+      transition: 300ms;
+
+      img {
+        transform: rotateY(-180deg);
+        transform-origin: center center;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    border-radius: 50% !important;
+    border: 1px solid $primary;
+    padding: 8px !important;
+    transition: 300ms;
+
+    img {
+      height: 16px;
+      width: 16px;
+      transition: 300ms;
+    }
+
+
+  }
+
+
+}
+
+// img.phone {
+//   width: 60px;
+//   height: auto;
+//   margin-bottom: 20px;
+// }
+
+// .text {
+//   color: $primaryDark;
+// }
+
+// #follow {
+//   color: $primary;
+//   font-family: Metropolis;
+// }
+
+// @media (max-width : '840px') {
+//   .col-md-4 {
+//     margin-bottom: 50px;
+//   }
+// }
