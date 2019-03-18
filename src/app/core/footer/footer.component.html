@@ -1,0 +1,88 @@
+<footer class="footer footer-dark">
+  <div class="container">
+    <!-- <div class="content">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="col-md-12 text-center">
+            <img class="phone" src="/assets/svg/phone.svg" alt="phone">
+          </div>
+          <div class="col-md-12 text-center text">
+            give us a ring
+          </div>
+          <div class="col-md-12 text-center text">
+            Md Mobshshir Nayeem
+          </div>
+          <div class="col-md-12 text-center text">
+            +91 7808213330
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="col-md-12 text-center">
+            <img class="phone" src="/assets/svg/mail.svg" alt="phone">
+          </div>
+          <div class="col-md-12 text-center text">
+            mail us
+          </div>
+          <div class="col-md-12 text-center text">
+            Webyte Official
+          </div>
+          <div class="col-md-12 text-center text">
+            webyteofficial@gmail.com
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <h5 id="follow">Follow Us</h5>
+          <ul class="social-buttons">
+            <li>
+              <a target="_blank" href="https://www.youtube.com/channel/UClQ57Iza0JDCH8X2JFwNHLg"><img src="/assets/svg/youtube.svg"
+                  alt="youtube"></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.facebook.com/webyteofficial/"><img src="/assets/svg/facebook.svg"
+                  alt="facebook"></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://twitter.com/webyteofficial"><img src="/assets/svg/twitter.svg" alt="twitter"></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.instagram.com/webyteofficial"><img src="/assets/svg/instagram.svg"
+                  alt="instagram"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> 
+  <hr />-->
+    <div class="row">
+      <div class="col-md-3">
+        <div class="text-white">
+          WeByte &copy; {{date | date:'yyyy'}}
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="credits">
+          <p>Made with <img src="assets/img/icons/love.svg" alt="love"> by
+            <a href="https://github.com/invinciblezeal" target="_blank">Ritesh</a> and
+            <a href="https://github.com/abhiarrathore" target="_blank">Abhishek</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <nav class="socials">
+          <ul>
+            <li class="mx-2" *ngFor="let social of socials">
+              <a href="{{social.url}}" target="_blank">
+                <!-- <i *ngIf="social.media !== 'facebook'; else facebook" class="fab fa-{{social.media}}"></i>
+                <ng-template #facebook><i class="fa fa-facebook-f"></i></ng-template> -->
+                <img src="assets/img/icons/{{social.media}}.svg" alt={{social.media}}>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
