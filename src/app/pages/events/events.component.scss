@@ -1,8 +1,8 @@
-section#events{
+section#events {
   position: relative;
   background: #716a75;
 
-  div.up{
+  div.up {
     width: 45px;
     height: 45px;
     padding: 10px;
@@ -10,239 +10,250 @@ section#events{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 90vh ;
+    top: 90vh;
     z-index: 40;
     cursor: pointer;
     box-shadow: 1px 1px 5px black, -1px 1px 5px black;
-    img{
+
+    img {
       height: 45px;
       width: 45px;
     }
-  } 
+  }
 }
 
 .nav-bar {
-    margin: 20px;
-    width: 600px;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .nav-bar > span {
-    width: 20%;
-  }
-  
-  .nav-bar > span svg {
-    position: absolute;
-    top: 8px;
-  }
-  
-  #brand a, .nav-bar > span a {
-    text-decoration: none;
-    color: #2bdbff;
-  }
-  
-  #brand a:hover, .nav-bar > span a:hover {
-    color: #fff;
-  }
-  
-  .nav-bar > span a span {
-    display: table;
-    margin: auto;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    font-weight: lighter;
-  }
-  
-  .button {
-    stroke-dasharray: 100 255;
-    stroke-dashoffset: 200;
-    opacity:0;
-  }
-  
-  .button .border{
-    fill:none;
-    stroke:#2BDBFF;
-    stroke-width: 2;
-    stroke-miterlimit:10;
-    stroke-linecap: round;
-  }
-  
-  .button:hover {
-    animation: border 1s ease-out forwards;
-  }
-  
-  @keyframes border {
-    0% {
-      opacity: 0;
-    }
-    2% {
-      opacity: 1;
-    }
-    40% {
-      stroke-dasharray: 180;
-    }
-    100% {
-      opacity: 1;
-      stroke-dasharray: 20 200;
-      stroke-dashoffset: -195;
-    }
-  }
-  
-  #showcase{
-    position: absolute;
-    height: 100vh;
-    top: 0;
-    display: flex;
-    width: 2500px;
-    z-index: 5;
-    text-align: center;
-  }
-  
-  #showcase .event{
-    height: 100%;
-    width: 500px;
-    z-index: 5;
-    cursor: pointer;
-  }
-  
-  #showcase .event:hover {
-    background: #000;
-    background: rgba(0,0,0,0.2);
-  }
-  
-  #showcase .event svg {
-    fill: #2bdbff;
-    position: relative;
-    top: 15%;
-  }
-  
-  #cdc-desktop-fill, #cdc-mac-fill {
-    fill: #151316;
-  }
-  
-  #showcase .event h1{
-    position: relative;
-    top: 15%;
-    text-transform: uppercase;
-    font-family: "Nova Mono", monospace;
-    font-weight: lighter;
-    font-size: 1.6em;
-    letter-spacing: 5px;
-  }
-  
-  #showcase .event:hover h1 {
-    color: #fff;
-    transition: 500ms;
-  }
-  
-  #showcase .event-btns {
-    position: relative;
-    top: 15%;
-    visibility: hidden;
-  }
-  
-  #showcase .event:hover .event-btns {
-    animation: eventbtns 500ms ease-out forwards;
-  }
-  
-  @keyframes eventbtns {
-    to {
-      transform : translateY(50%);
-      visibility: initial;
-    }
-  }
-  
-  #showcase .event-btns a {
-    font-size: 12px;
-    text-decoration: none;
-    color: #2bdbff;
-    margin: 0 20px;
-  }
-  
-  #showcase .event-btns a span {
-    width: 150px;
-    display: inline-block;
-    border: #2bdbff 1px solid;
-    padding: 10px;
-    transition: 200ms;
-    box-shadow: 0 0 15px 5px #0a0a0a;
-  }
-  
-  #showcase .event-btns a:hover span {
-    background: #2bdbff;
-    color: #151316;
-    width: 145px;
-    padding: 9px;
-    box-shadow: none;
-  }
-  
-  /* ====>>>> EVENTS <<<<==== */
-  .active {
-    display: block !important;
-  }
-  
-  .active-tab {
-    background: linear-gradient(to right, #2bdbff, #1a181b);
-    color: #1a181b;
-    transition: 300ms;
-    box-shadow: -5px 5px 4px 1px #111;
-  }
-  
-  .active-tab span{
-    display: inline-block;
-    -webkit-transform: translateX(15px);
-    -ms-transform: translateX(15px);
-    transform: translateX(15px);
-    transition: 300ms;
-  }
-  
-  #event-des {
-    position: relative;
-    top: 25%;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-  }
-  
-  #event-des {
-    position: fixed;
-  }
-  
-  #event-des ul {
-    list-style: none;
-    font-family: "Montserrat", monospace;
-    font-size: 15px;
-    letter-spacing: 3px;
-    width: 20vw;
-    padding: 0;
-    margin: 15px;
-  }
-  
-  #event-des ul li {
-    margin: 10px 0;
-    padding: 10px;
-  }
-  
-  #event-des ul li:not(.active-tab):hover {
-    background: linear-gradient(to right, rgba(43,219,255,0.4), #1a181b)
-  }
-  
-  #event-des ul li:not(.active-tab):hover span {
-    display: inline-block;
-    transform: translateX(5px);
-    transition: 250ms;
-  }
-  
-  #event-des .tabcontent {
-    font-family: "Raleway", sans-serif;
-    display: none;
+  margin: 20px;
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar>span {
+  width: 20%;
+}
+
+.nav-bar>span svg {
+  position: absolute;
+  top: 8px;
+}
+
+#brand a,
+.nav-bar>span a {
+  text-decoration: none;
+  color: #2bdbff;
+}
+
+#brand a:hover,
+.nav-bar>span a:hover {
+  color: #fff;
+}
+
+.nav-bar>span a span {
+  display: table;
+  margin: auto;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.button {
+  stroke-dasharray: 100 255;
+  stroke-dashoffset: 200;
+  opacity: 0;
+}
+
+.button .border {
+  fill: none;
+  stroke: #2BDBFF;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke-linecap: round;
+}
+
+.button:hover {
+  animation: border 1s ease-out forwards;
+}
+
+@keyframes border {
+  0% {
+    opacity: 0;
   }
 
-  
-  img { 
-    width: 300px; 
-    height: auto; 
+  2% {
+    opacity: 1;
   }
-  
-  
+
+  40% {
+    stroke-dasharray: 180;
+  }
+
+  100% {
+    opacity: 1;
+    stroke-dasharray: 20 200;
+    stroke-dashoffset: -195;
+  }
+}
+
+#showcase {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  width: 2500px;
+  z-index: 5;
+  text-align: center;
+}
+
+#showcase .event {
+  height: 100%;
+  width: 500px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#showcase .event:hover {
+  background: #000;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#showcase .event svg {
+  fill: #2bdbff;
+  position: relative;
+  top: 15%;
+}
+
+#cdc-desktop-fill,
+#cdc-mac-fill {
+  fill: #151316;
+}
+
+#showcase .event h1 {
+  position: relative;
+  top: 15%;
+  text-transform: uppercase;
+  font-family: "Nova Mono", monospace;
+  font-weight: lighter;
+  font-size: 1.6em;
+  letter-spacing: 5px;
+}
+
+#showcase .event:hover h1 {
+  color: #fff;
+  transition: 500ms;
+}
+
+#showcase .event-btns {
+  position: relative;
+  top: 15%;
+  visibility: hidden;
+}
+
+#showcase .event:hover .event-btns {
+  animation: eventbtns 500ms ease-out forwards;
+}
+
+@keyframes eventbtns {
+  to {
+    transform: translateY(50%);
+    visibility: initial;
+  }
+}
+
+#showcase .event-btns a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #2bdbff;
+  margin: 0 20px;
+}
+
+#showcase .event-btns a span {
+  width: 150px;
+  display: inline-block;
+  border: #2bdbff 1px solid;
+  padding: 10px;
+  transition: 200ms;
+  box-shadow: 0 0 15px 5px #0a0a0a;
+}
+
+#showcase .event-btns a:hover span {
+  //   background: #2bdbff;
+  //   color: #151316;
+  width: 145px;
+  padding: 9px;
+  margin: 1px;
+  box-shadow: none;
+}
+
+#showcase .event-btns a:active span {
+  background: #2bdbff;
+  color: #151316;
+}
+
+/* ====>>>> EVENTS <<<<==== */
+.active {
+  display: block !important;
+}
+
+.active-tab {
+  background: linear-gradient(to right, #2bdbff, #1a181b);
+  color: #1a181b;
+  transition: 300ms;
+  box-shadow: -5px 5px 4px 1px #111;
+}
+
+.active-tab span {
+  display: inline-block;
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+  transition: 300ms;
+}
+
+#event-des {
+  position: relative;
+  top: 25%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+#event-des {
+  position: fixed;
+}
+
+#event-des ul {
+  list-style: none;
+  font-family: "Montserrat", monospace;
+  font-size: 15px;
+  letter-spacing: 3px;
+  width: 20vw;
+  padding: 0;
+  margin: 15px;
+}
+
+#event-des ul li {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+#event-des ul li:not(.active-tab):hover {
+  background: linear-gradient(to right, rgba(43, 219, 255, 0.4), #1a181b)
+}
+
+#event-des ul li:not(.active-tab):hover span {
+  display: inline-block;
+  transform: translateX(5px);
+  transition: 250ms;
+}
+
+#event-des .tabcontent {
+  font-family: "Raleway", sans-serif;
+  display: none;
+}
+
+
+img {
+  width: 300px;
+  height: auto;
+}

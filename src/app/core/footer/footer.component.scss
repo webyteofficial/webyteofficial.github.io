@@ -27,7 +27,6 @@ footer {
       img {
         height: 18px;
         width: 18px;
-        transition: 300ms;
       }
     }
 
@@ -38,18 +37,16 @@ footer {
       left: 0;
       border-radius: 50% !important;
       border: 1px solid $primary;
-      transition: 300ms;
+      transition: 500ms;
       height: 36px;
       width: 36px;
     }
 
     &:hover a::after {
       transform: rotateY(180deg);
-      transition: 300ms;
+      transition: 500ms;
     }
   }
-
-
 }
 
 // .socials {

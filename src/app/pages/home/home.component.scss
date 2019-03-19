@@ -13,6 +13,12 @@ section#landing {
     // font-family: "Nova Mono";
     font-weight: 700;
 
+    .mybtn span {
+      width: 100% !important;
+      display: inline-block;
+      text-align: center;
+    }
+
     div {
       padding: 0;
       margin: 0;
