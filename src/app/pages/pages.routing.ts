@@ -1,3 +1,4 @@
+import { EventComponent } from './event/event.component';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EventsComponent } from './events/events.component';
@@ -9,4 +10,5 @@ export const PAGE_ROUTES: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'events', component: EventsComponent },
+    { path: 'event', component: EventComponent },
 ]
