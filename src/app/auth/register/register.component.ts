@@ -22,7 +22,7 @@ export class RegisterComponent  {
 
     constructor(private userService: UserService, private router: Router) { }
 
-    register() {
+    register(e: any) {
         var body = {
             firstName  : this.firstname, 
             lastName : this.lastname, 
