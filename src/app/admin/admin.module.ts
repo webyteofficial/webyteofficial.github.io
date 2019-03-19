@@ -22,12 +22,13 @@ import { EventComponent } from './event/event.component';
     imports: [
         CoreModule,
         RouterModule.forChild([
+            { path: '', redirectTo: 'login' },
             { path: 'login', component: AdminLoginComponent },
-            { path: 'users', component: AdminUsersComponent, canActivate : [AuthGuard]  },
-            { path: 'dashboard', component: AdminDashboardComponent, canActivate : [AuthGuard] },
-            { path: 'create-event', component: CreateEventComponent, canActivate : [AuthGuard] },
-            { path: 'events', component: GetEventsComponent, canActivate : [AuthGuard] },
-            { path: 'events/:id', component: EventComponent, canActivate : [AuthGuard]},
+            { path: 'users', component: AdminUsersComponent, canActivate: [AuthGuard] },
+            { path: 'dashboard', component: AdminDashboardComponent, canActivate: [AuthGuard] },
+            { path: 'create-event', component: CreateEventComponent, canActivate: [AuthGuard] },
+            { path: 'events', component: GetEventsComponent, canActivate: [AuthGuard] },
+            { path: 'events/:id', component: EventComponent, canActivate: [AuthGuard] },
         ])
     ]
 })

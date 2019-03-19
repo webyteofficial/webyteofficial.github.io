@@ -1,12 +1,12 @@
 <section id="events">
   <main id="showcase">
-      <div *ngFor = "let event of events" class="event {{event.name | lowercase}}" >
-        <img [src]="event.image" alt="">
-        <h1> {{ event.name }} </h1>
-        <div class="event-btns">
-          <a href="./events/{{event.name | lowercase }}.html"><span>READ MORE</span></a>
-          <a href="./events/register.html"><span>REGISTER</span></a>
-        </div>
+    <div *ngFor="let event of events" class="event {{event.name | lowercase}}">
+      <img [src]="event.image" alt="">
+      <h1> {{ event.name }} </h1>
+      <div class="event-btns">
+        <a href="./events/{{event.name | lowercase }}.html"><span>READ MORE</span></a>
+        <a href="./events/register.html"><span>REGISTER</span></a>
       </div>
+    </div>
   </main>
 </section>

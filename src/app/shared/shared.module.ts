@@ -1,14 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { AdminService } from './services/admin.service';
+import { DataService } from './services/data.service';
 import { UserService } from './services/user.service';
+import { TeamFilterPipe } from './pipes/team-filter.pipe';
 
 @NgModule({
-    declarations: [],
+    declarations: [TeamFilterPipe],
     imports: [
         CommonModule
     ],
     providers: [
-        UserService
-    ]
+        DataService,
+        UserService,
+        AdminService
+    ],
+    exports: [TeamFilterPipe]
 })
 export class SharedModule { }

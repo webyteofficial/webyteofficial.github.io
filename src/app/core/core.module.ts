@@ -11,7 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { NavbarComponent } from './navbar/navbar.component';
-import {MatSortModule} from '@angular/material/sort';
+import { MatSortModule } from '@angular/material/sort';
+import { FooterComponent } from './footer/footer.component';
 
 const MODULES = [
     CommonModule,
@@ -29,7 +30,8 @@ const MODULES = [
 ]
 
 const COMPONENTS = [
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
 ]
 
 @NgModule({
