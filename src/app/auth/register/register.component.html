@@ -1,106 +1,109 @@
 <section id="signup">
-	<div class="row wrapper">
-		<div class="col-md-2"></div>
-		<div class="card col-md-8">
-			<form class="form" (ngSubmit) = "register($event)">
-				<div class="card-header text-center">
-					<h3 class="card-title title-up">Sign Up</h3>
-					<div class="social-line">
-						<a href=""  id ="google">
-							<img src="./../../assets/svg/google.svg" alt="">
-						</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-group col-md-6">
-						<div class="input-group-prepend">
-							<span class="input-group-text">
-								<img src="./../../assets/svg/first.svg" alt="">
-							</span>
-						</div>
-						<input type="text" class="form-control" name = "fname" placeholder="First Name..." [(ngModel)] = "firstname" #nameInput required>
-					</div>
-					<div class="input-group col-md-6">
-						<div class="input-group-prepend">
-							<span class="input-group-text">
-								<img src="./../../assets/svg/last.svg" alt="">
-							</span>
-						</div>
-						<input type="text" name = "lname" placeholder="Last Name..." class="form-control" [(ngModel)] = "lastname"/>
-					</div>
-				</div>
+  <div class="row wrapper">
+    <div class="col-md-2"></div>
+    <div class="card col-md-8">
+      <form class="form" (ngSubmit)="register($event)">
+        <div class="card-header text-center">
+          <h3 class="card-title title-up">Sign Up</h3>
+          <div class="social-line">
+            <a href="" id="google">
+              <img src="./../../assets/svg/google.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group col-md-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <img src="./../../assets/svg/first.svg" alt="">
+              </span>
+            </div>
+            <input type="text" class="form-control" name="fname" placeholder="First Name..." [(ngModel)]="data.firstName"
+              #nameInput required>
+          </div>
+          <div class="input-group col-md-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <img src="./../../assets/svg/last.svg" alt="">
+              </span>
+            </div>
+            <input type="text" name="lname" placeholder="Last Name..." class="form-control" [(ngModel)]="data.lastName" />
+          </div>
+        </div>
 
-				<div class="row">
-					<div class="input-group col-md-12">
-						<div class="input-group-prepend">
-							<span class="input-group-text">
-								<img src="./../../assets/svg/enroll.svg" alt="">
-							</span>
-						</div>
-						<input type="text" name = "enrollment" class="form-control" placeholder="Enrollment..." [(ngModel)] = "enrollment">
-					</div>
-				</div>
-						
-				<div class="row">
-					<div class="input-group col-md-12">
-						<div class="input-group-prepend">
-							<span class="input-group-text">
-									<img src="./../../assets/svg/mail.svg" alt="">
-							</span>
-						</div>
-						<input type="text" name = "email" class="form-control" placeholder="Email..." [(ngModel)] = "email" #emailInput>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-group col-md-12">
-						<div class="input-group-prepend">
-							<span class="input-group-text">
-								<img src="./../../assets/svg/phone.svg" alt="">
-							</span>
-						</div>
-						<input type="text" name = "phone" class="form-control" placeholder="Phone number..." [(ngModel)] = "phone">
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-group no-border col-md-12">
-						<div class="input-group-prepend">
-							<span class="input-group-text">
-								<img src="./../../assets/svg/key.svg" alt="">
-							</span>
-						</div>
-						<input type="password" name = "password" class="form-control" placeholder="Password..." [(ngModel)] = "password">
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-group no-border col-md-12">
-						<div class="input-group-prepend">
-							<span class="input-group-text">
-								<img src="./../../assets/svg/gender.svg" alt="">
-							</span>
-						</div>
-						<select name="gender" id="gender" class="form-control" [(ngModel)] = "gender" placeholder = "Gender...">
-							<option value="Male" selected>Male</option>
-							<option value="Female">Female</option>
-						</select>
-					</div>
-				</div>
-				<div class="card-footer text-center">
-					<button type="submit" class="btn1"> Get Started </button>
-				</div>
+        <div class="row">
+          <div class="input-group col-md-12">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <img src="./../../assets/svg/enroll.svg" alt="">
+              </span>
+            </div>
+            <input type="text" name="enrollment" class="form-control" placeholder="Enrollment..." [(ngModel)]="data.enrollment">
+          </div>
+        </div>
 
-				<small *ngIf = "displayDuplicate" [ngStyle]="{'color' : '#d50000'}" id="errorLogin"> User Already registered </small>
-			</form>
-		</div>
-	</div>
+        <div class="row">
+          <div class="input-group col-md-12">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <img src="./../../assets/svg/mail.svg" alt="">
+              </span>
+            </div>
+            <input type="text" name="email" class="form-control" placeholder="Email..." [(ngModel)]="data.email"
+              #emailInput>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group col-md-12">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <img src="./../../assets/svg/phone.svg" alt="">
+              </span>
+            </div>
+            <input type="text" name="phone" class="form-control" placeholder="Phone number..." [(ngModel)]="data.phone">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group no-border col-md-12">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <img src="./../../assets/svg/key.svg" alt="">
+              </span>
+            </div>
+            <input type="password" name="password" class="form-control" placeholder="Password..." [(ngModel)]="data.password">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group no-border col-md-12">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <img src="./../../assets/svg/gender.svg" alt="">
+              </span>
+            </div>
+            <select name="gender" id="gender" class="form-control" [(ngModel)]="data.gender" placeholder="Gender...">
+              <option value="Male" selected>Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <button type="submit" class="btn1"> Get Started </button>
+        </div>
+
+        <small *ngIf="displayDuplicate" [ngStyle]="{'color' : '#d50000'}" id="errorLogin"> User Already registered
+        </small>
+      </form>
+    </div>
+  </div>
 </section>
 
 <div class="overlay" #overlay>
-	<div class="close" (click) ="close()">
-	  X
-	</div>
-	
-	<div class="card">
-		hi {{ lastname }}/{{ firstname }}.<br>
-		You have been successfully registered
-	</div>
+  <div class="close" (click)="close()">
+    X
+  </div>
+
+  <div class="card">
+    hi {{ lastname }}/{{ firstname }}.<br>
+    You have been successfully registered
+  </div>
 </div>
