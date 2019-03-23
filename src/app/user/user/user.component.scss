@@ -1,0 +1,36 @@
+@import './../../shared/variables.scss';
+
+
+div.col-md-10{
+    margin-top: 50px;
+    border: 1px solid $primaryLight;
+    div.col-md-3{
+        padding: 0;
+        .navitems{
+            font-size: 1.2em;
+            // color: $primaryDark;
+            color: black;
+            margin: 0;
+            padding: 20px;
+            background: $secondaryDark;
+            font-weight: 700;
+        }
+        
+        .navitems:hover{
+            // background: #272429;
+            background: $secondary;
+            text-decoration: none;
+        }
+    }
+    
+    div.col-md-9{
+        margin: 0;
+        padding: 20px;
+        background: rgb(35, 32, 37);
+    }
+}
+
+.active{
+    // background: #141416;
+    background: $secondaryLight;
+}

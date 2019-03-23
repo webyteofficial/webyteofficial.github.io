@@ -13,10 +13,7 @@
     </svg>
     <h1>WeByte</h1>
   </div>
-
-  <!-- <label for="toggle"> toggle </label>
-  <input type="checkbox" id="toggle">
-   -->
+  
   <nav class="nav-bar">
     <span>
       <a routerLink="events">
@@ -34,7 +31,7 @@
         <span>About</span>
       </a>
     </span>
-    <span>
+    <span *ngIf="!loggedIn">
       <a routerLink="auth/registration">
         <svg class="button" width="120" height="50">
             <rect x="0" y="5" class="border" width="110" height="40"/>
@@ -42,13 +39,20 @@
         <span>Register</span>
       </a>
     </span>
-    <span>
+    <span *ngIf="!loggedIn">
       <a (click)="open()">
         <svg class="button" width="120" height="50">
             <rect x="0" y="5" class="border" width="110" height="40"/>
         </svg>
         <span>Login</span>
       </a>
+    </span>
+    <span ngbDropdown *ngIf="loggedIn" class="dropdown">
+      <span id="dropdownBasic1" ngbDropdownToggle><img src="/assets/img/icons/user.svg" alt="user"></span>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="profile()">Profile</button>
+        <button ngbDropdownItem (click)="logout()">Logout</button>
+      </div>
     </span>
   </nav>
 </header>

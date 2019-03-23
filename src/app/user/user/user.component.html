@@ -1,0 +1,24 @@
+<section id="profile" class="wrapper">
+  <div class="container row">
+    <div class="col-md-1"></div>
+
+    <div class="col-md-10 row">
+      <div class="col-md-3 row">
+        <a class="col-md-12 navitems" routerLink = 'profile' routerLinkActive='active'>
+          Profile
+        </a>
+        <a class="col-md-12 navitems" routerLink = 'achievements' routerLinkActive='active'>
+          Achievements
+        </a>
+        <a class="col-md-12 navitems" routerLink = 'reset' routerLinkActive='active'>
+          Reset Password
+        </a>
+      </div>
+
+      <div class="col-md-9">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+  </div>
+</section>
