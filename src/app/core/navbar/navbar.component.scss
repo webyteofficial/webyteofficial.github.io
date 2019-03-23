@@ -230,3 +230,25 @@ input:focus, input:active, .input-group-prepend:focus, .form-control:focus{
     box-shadow: none;
     outline: none;
 }
+
+
+// dropdown styling
+span.dropdown{
+  font-family: Metropolis;
+  span{
+    img{
+      width: 1.6em;
+      height: 1.6em;
+    }
+  }
+  div{
+    background: rgb(33, 30, 34);
+    
+    span,button{
+      color: white;
+    }
+    span:hover,button:hover{
+      background: rgb(41, 37, 43);
+    }
+  }
+}

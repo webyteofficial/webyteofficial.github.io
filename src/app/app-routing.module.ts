@@ -12,6 +12,7 @@ const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'events', component: EventsComponent },
+    { path : 'users', loadChildren : './user/user.module#UserModule'},
     { path: 'auth', loadChildren: './auth/auth.module#AuthModule' },
     { path: 'admin', loadChildren: './admin/admin.module#AdminModule' },
     { path: '**', redirectTo: 'home' },

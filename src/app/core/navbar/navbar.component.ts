@@ -20,6 +20,7 @@ export class NavbarComponent{
   constructor(private userService : UserService,private router : Router) { }
 
   ngOnInit() {
+    this.loggedIn = localStorage.getItem('token') ? true : false;
   }
 
   login(){
@@ -67,4 +68,12 @@ export class NavbarComponent{
   }
 
 
+  logout(){
+    localStorage.removeItem('token');
+    this.loggedIn = localStorage.getItem('token') ? true : false;
+  }
+
+  profile(){
+    this.router.navigate(['/users/me']);
+  }
 }
