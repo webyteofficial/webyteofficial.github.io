@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { EventsComponent } from './events/events.component';
 import { HomeComponent } from './home/home.component';
+import { VerifyComponent } from './verify/verify.component';
 
 @NgModule({
     declarations: [
@@ -13,6 +14,7 @@ import { HomeComponent } from './home/home.component';
         ContactComponent,
         EventsComponent,
         HomeComponent,
+        VerifyComponent,
     ],
     imports: [
         CoreModule,

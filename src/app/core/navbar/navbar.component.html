@@ -13,10 +13,7 @@
     </svg>
     <h1>WeByte</h1>
   </div>
-
-  <!-- <label for="toggle"> toggle </label>
-  <input type="checkbox" id="toggle">
-   -->
+  
   <nav class="nav-bar">
     <span>
       <a routerLink="events">
@@ -53,7 +50,6 @@
     <span ngbDropdown *ngIf="loggedIn" class="dropdown">
       <span id="dropdownBasic1" ngbDropdownToggle><img src="/assets/img/icons/user.svg" alt="user"></span>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <span ngbDropdownItem>abhishek rathore</span>
         <button ngbDropdownItem (click)="profile()">Profile</button>
         <button ngbDropdownItem (click)="logout()">Logout</button>
       </div>

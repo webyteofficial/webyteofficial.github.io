@@ -8,13 +8,17 @@ div.col-md-10{
         padding: 0;
         .navitems{
             font-size: 1.2em;
-            color: $primaryDark;
+            // color: $primaryDark;
+            color: black;
             margin: 0;
             padding: 20px;
+            background: $secondaryDark;
+            font-weight: 700;
         }
         
         .navitems:hover{
-            background: #272429;
+            // background: #272429;
+            background: $secondary;
             text-decoration: none;
         }
     }
@@ -27,5 +31,6 @@ div.col-md-10{
 }
 
 .active{
-    background: #141416;
+    // background: #141416;
+    background: $secondaryLight;
 }

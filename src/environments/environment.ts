@@ -4,7 +4,8 @@
 
 export const environment = {
     production: false,
-    api: 'https://webyte-api.herokuapp.com',
+    api: 'http://ec2-3-84-117-231.compute-1.amazonaws.com',
+    // api: 'https://webyte-api.herokuapp.com',
     // api: 'http://localhost:3000',
 };
 
