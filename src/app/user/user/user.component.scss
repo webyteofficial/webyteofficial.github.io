@@ -1,25 +1,31 @@
 @import './../../shared/variables.scss';
 
+
 div.col-md-10{
     margin-top: 50px;
     border: 1px solid $primaryLight;
     div.col-md-3{
         padding: 0;
-        div.navitems{
+        .navitems{
             font-size: 1.2em;
             color: $primaryDark;
             margin: 0;
             padding: 20px;
         }
         
-        div.navitems:hover{
+        .navitems:hover{
             background: #272429;
+            text-decoration: none;
         }
     }
     
     div.col-md-9{
         margin: 0;
-        background: #221f24;
+        padding: 20px;
+        background: rgb(35, 32, 37);
     }
 }
 
+.active{
+    background: #141416;
+}

@@ -4,22 +4,22 @@
 
     <div class="col-md-10 row">
       <div class="col-md-3 row">
-        <div class="col-md-12 navitems">
+        <a class="col-md-12 navitems" routerLink = 'profile' routerLinkActive='active'>
           Profile
-        </div>
-        <div class="col-md-12 navitems">
+        </a>
+        <a class="col-md-12 navitems" routerLink = 'achievements' routerLinkActive='active'>
           Achievements
-        </div>
-        <div class="col-md-12 navitems">
+        </a>
+        <a class="col-md-12 navitems" routerLink = 'participations' routerLinkActive='active'>
           Participation
-        </div>
-        <div class="col-md-12 navitems">
+        </a>
+        <a class="col-md-12 navitems" routerLink = 'reset' routerLinkActive='active'>
           Reset Password
-        </div>
+        </a>
       </div>
 
       <div class="col-md-9">
-        something
+        <router-outlet></router-outlet>
       </div>
     </div>
 

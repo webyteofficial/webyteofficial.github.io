@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reset.component.scss']
 })
 export class ResetComponent implements OnInit {
-
+  current;
+  new;
+  confirm;
+  
   constructor() { }
 
   ngOnInit() {
